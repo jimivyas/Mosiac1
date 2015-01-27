@@ -38,7 +38,7 @@ class Events
 	def make_date_hash(events)
 		if valid_test(events)
 			events = events.group_by { |e|	e.first }
-			events = events.map { |_, e| #underscore is for blank variables
+			events = events.map { |_, e| #underscore is for unused variables
 				e.inject(:merge)}
 			puts events
 		else
